@@ -1,25 +1,36 @@
 <template>
-    <div class="pt-[28px] text-md text-custom-gray flex gap-2 justify-center">
-        <div
-            v-for="(tab, i) in tabs"
-            :key="i"
-            class="flex flex-col h-10 justify-between"
+    <div>
+        <h1
+            class="pt-2 lg:pt-4 font-[500] text-[2rem] lg:text-[3.5rem] text-center"
         >
-            <button
-                @click="selectedIndex = i"
-                class="px-2 hover:text-blue-400 transition ease-in-out duration-75"
-                :class="{ 'text-custom-blue font-[500]': selectedIndex === i }"
-            >
-                {{ tab }}
-            </button>
+            Подписки «Клерка»
+        </h1>
 
-            <!-- Bottom line when tab is selected -->
-            <Transition name="fade">
-                <div
-                    v-if="selectedIndex === i"
-                    class="h-[2px] w-full bg-custom-blue"
-                ></div>
-            </Transition>
+        <!-- Tabs section -->
+        <div class="pt-4 text-md text-custom-gray flex gap-2 justify-center">
+            <div
+                v-for="(tab, i) in tabs"
+                :key="i"
+                class="flex flex-col h-10 justify-between"
+            >
+                <button
+                    @click="selectedIndex = i"
+                    class="px-2 hover:text-blue-600 transition ease-in-out duration-75"
+                    :class="{
+                        'text-custom-blue font-[500]': selectedIndex === i,
+                    }"
+                >
+                    {{ tab }}
+                </button>
+
+                <!-- Bottom line when tab is selected -->
+                <Transition name="fade">
+                    <div
+                        v-if="selectedIndex === i"
+                        class="h-[2px] w-full bg-custom-blue"
+                    ></div>
+                </Transition>
+            </div>
         </div>
     </div>
 </template>
