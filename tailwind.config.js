@@ -9,7 +9,16 @@ export default {
         "./error.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ["Roboto", "Arial", "sans-serif"],
+            },
+            colors: {
+                "custom-gray-light": "#999999",
+                "custom-gray": "#666666",
+                "custom-blue": "#5A8CF1",
+            },
+        },
     },
     plugins: [],
 }
