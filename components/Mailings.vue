@@ -49,6 +49,7 @@ import { webpPaths } from "@/plugins/loadWebpImages"
 
 const mailingData: Ref<MailingItem[]> = ref([])
 onMounted(async () => {
+    console.log(webpPaths)
     /** Fill data object after webPaths is loaded on app start */
     mailingData.value = [
         {
