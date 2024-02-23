@@ -8,7 +8,4 @@ export default defineNuxtConfig({
         },
     },
     css: ["~/main.css"],
-    vite: {
-        build: { minify: false },
-    },
 })
