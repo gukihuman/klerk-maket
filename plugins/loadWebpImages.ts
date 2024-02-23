@@ -24,5 +24,5 @@ function parseFileName(path: string) {
     let match: any[] | null = null
     match = path.match(/\/([^/]+)\.webp/)
     if (!match) return
-    return `${match[1]}`
+    return `${match[1].toLowerCase()}`
 }
