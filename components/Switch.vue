@@ -13,7 +13,7 @@
             class="bg-white drop-shadow rounded-full transition ease-in-out duration-125"
             :class="{
                 'w-[14px] h-[14px] m-[1px]': size === 'sm',
-                'w-[19px] h-[19px] m-[2px]': size === 'md',
+                'w-[20px] h-[20px] m-[2px]': size === 'md',
                 'translate-x-[16px]': isOn && size === 'sm',
                 'translate-x-[24px]': isOn && size === 'md',
             }"
